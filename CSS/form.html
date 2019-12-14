@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form</title>
+	<style type="text/css">
+		.txt {
+				background-color: #bdc1c7;
+				border: 1px solid black;
+		}
+		.pwd {
+				width: 100%;
+				padding: 10px;
+		}
+		.txt:hover {
+			border-color: blue;
+		}
+
+	</style>
+</head>
+<body>
+ 	<form>
+ 		<label>UserName</label>
+ 		<input class="txt" type="text" name="Username"><br>
+ 		<label>Password</label>
+ 		<input class="pwd" type="Password" name="Password"><br><br>
+ 		<label>Select Course</label><br>
+ 		<label>PYTHON</label>
+ 		<input type="checkbox" name="Course1" value="Python">
+ 		<label>JAVA</label>
+ 		<input type="checkbox" name="Course2" value="java">
+ 		<label>PHP</label>
+ 		<input type="checkbox" name="Course3" value="php">
+ 		<label>C++</label>
+ 		<input type="checkbox" name="Course4" value="C++"><br><br>
+ 		<label>Select Course Type</label><br>
+ 		<label>Individual Course</label>
+ 		<input type="radio" name="coursetype" value="Individual">
+ 		<label>Full Stack Course</label>
+ 		<input type="radio" name="coursetype" value="Fullstack"><br><br>
+ 		<label>Select Front End Course</label>
+ 		<select>
+ 			<option selected="selected">HTML</option>
+ 			<option>CSS</option>
+ 			<option>BOOTSTRAP</option>
+ 			<option>ANGULAR</option>
+ 		</select><br><br>
+ 		<label>Comments</label><br>
+ 		<textarea rows="10" cols="30"></textarea>
+
+ 	</form>
+</body>
+</html>

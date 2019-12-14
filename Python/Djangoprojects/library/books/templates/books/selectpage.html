@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<div class="container">	
+	<table style="margin-top: 180px;margin-left:300px;width: 50%" 
+								class="table table-bordered table-hover">
+			<caption style="color: black;font-size: 30px;text-align:center;font-weight: bold">BOOK DETAILS</caption>
+			<tr>
+				<th>BOOK ID</th>
+				<td>{{book.id}}</td>
+			</tr>
+			<tr>
+				<th>BOOK NAME</th>
+				<td>{{book.book_name}}</td>	
+			</tr>
+			<tr>
+				<th>BOOK AUTHOR</th>
+				<td>{{book.author_name}}</td>
+			</tr>
+			<tr>
+				<th>YEAR PUBLISHED</th>
+				<td>{{book.year}}</td>
+			</tr>
+	</table>
+	<button class="btn btn-success" style="margin-left: 550px;" onclick="window.location.href =
+		 'http://localhost:8000/books/intro-page/';">GO BACK</button>

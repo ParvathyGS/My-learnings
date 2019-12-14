@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form-Validation</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.myStyle {
+			border : 1px solid red;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#submit").click(function(e) {
+				e.preventDefault();
+			var name1 = $("#name").val();
+			var len = name1.length;
+			if (len < 3) {
+				$("#name").addClass("myStyle");
+				$("#errmsg1").text("Name should be in atleast 3 character length.");
+			}
+			var pswd11 = $("#pswd1").val();
+			var pswd22 = $("#pswd2").val();
+			var pswdlen = pswd11.length;
+			if ( pswd11 == pswd22 && pswdlen > 8 ) {
+				alert("Succcessfully entered the password.");
+			} else {
+				$("#pswd1").addClass("myStyle");
+				$("#pswd2").addClass("myStyle");
+				$("#errmsg2").text("Password should match and should have atleast 8 characters.");
+			}
+			var emailid =$("#email").val();
+			if(emailid == '') { 
+				$("#email").addClass("myStyle");
+				$("#errmsg3").text("Email Id should not be kept blank.");
+		   }else{
+			   	var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	             if(!regex.test(emailid)) {
+	             	$("#email").addClass("myStyle");
+					$("#errmsg3").text("Email Id should not be kept blank.");	
+	             }else{
+	             	$("#email").removeClass("myStyle");
+					$("#errmsg3").text("");	
+	             }
+		   }
+			
+		
+			});
+		});
+	</script>
+</head>
+<body>
+	<span id="errmsg1"></span><br>
+	<span id="errmsg2"></span><br>
+	<span id="errmsg3"></span>
+	<form><br><br>
+		<label>Name</label>
+		<input type="text" id="name"><br><br>
+		<label>Email Id</label>
+		<input type="email" id="email"><br><br>
+		<label>Password</label>
+		<input id="pswd1" type="password" name="password"><br><br>
+		<label>Confirm Password</label>
+		<input id="pswd2" type="password" name="cpassword"><br><br>
+		<input id="submit" type="submit" name="submit" value="Submit">
+	</form>
+
+</body>
+</html>

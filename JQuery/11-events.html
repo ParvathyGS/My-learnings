@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>events</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 	<script>
+ 		$(document).ready(function() {
+ 			$("#p1").mouseenter(function() {
+ 				alert("you entered p1");
+ 			});
+ 		});
+ 	</script>
+ 	<!-- <script>
+ 		$(document).ready(function() {
+ 			$("#p1").mouseleave(function() {
+ 				alert("you leave p1..")
+ 			});
+ 		});
+ 	</script>
+ 	<script>
+ 		$(document).ready(function() {
+ 			$(".p2").mousedown(function() {
+ 				alert("you are in p2")
+ 			});
+ 		});
+ 	</script>
+ 	<script>
+ 		$(document).ready(function() {
+ 			$(".p2").mouseup(function() {
+ 				alert("you are in p2")
+ 			});
+ 		});
+ 	</script> -->
+</head>
+<body>
+	<p>Hello welcome to JQuery</p>
+ 	<p id="p1">this is first pgm</p>
+ 	<p class="p2">Happy to learn JQuery!!</p>
+</body>
+</html>

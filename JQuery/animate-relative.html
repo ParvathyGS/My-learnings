@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>relative animation</title>
+ 	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 	<script>
+ 		$(document).ready(function() {
+ 			$("button").click(function() {
+ 				$(".dd").animate({
+ 					left : '100px',
+ 					height : '+=100px',
+ 					width : '+=100px',
+ 					});
+ 			});
+ 		});
+ 	</script>
+ 	<style>
+ 		.dd {
+ 			background-color: pink;
+ 			height: 100px;
+ 			width: 100px;
+ 			position: absolute;
+ 		}
+ 	</style>
+</head>
+<body>
+	<button>Start Animation</button><br><br>
+	<div class="dd"></div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+.main-background {
+    background-color:#ffcf10;
+    background-image: url("https://cdn.sstatic.net/img/home/illo-hero-full.svg?v=e2018a5f9272");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+.p-slope-left {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%);
+}
+.py128 {
+    padding-top: 7% !important;
+    padding-bottom: 10% !important;
+    }
+
+.main-head {
+    text-align: center;
+    font-size: 400%;
+    font-family: 'Roboto Slab Bold',serif;
+    font-weight: 700;
+    margin-top: 5%;
+}
+.head2{
+    text-align: center;
+    font-size: 160%;
+}
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		var points = [45,25,80,75,60,90,35,95];
+		document.getElementById("demo").innerHTML = myArrayMax(points);
+
+function myArrayMax(arr) {
+  var len = arr.length;
+  var max = -Infinity;
+  while (len--) {
+    if (arr[len] > max) {
+      max = arr[len];
+    }
+  }
+  return max;
+}
+
+		
+
+	</script>
+
+</body>
+</html>

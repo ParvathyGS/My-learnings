@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>events-hover</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 	<script>
+ 		$(document).ready(function() {
+ 			$("#p1").hover(function() {
+ 				alert("you entered p1");
+ 			},
+ 			function() {
+ 				alert("Bye!Now you leave p1");
+ 			});
+ 		});
+ 	</script>
+ 	</head>
+<body>
+	<p>Hello welcome to JQuery</p>
+ 	<p id="p1">this is first pgm</p>
+ 	<p class="p2">Happy to learn JQuery!!</p>
+</body>
+</html>

@@ -1,0 +1,61 @@
+SQL JOINS
+
+CREATE TABLE Documents(Doc_Id INT NOT NULL,DocName VARCHAR(100),DocYear INT);
+CREATE TABLE Newspaper(Id INT NOT NULL,PaperName VARCHAR(100),PaperLang INT);
+
+INSERT INTO Documents VALUES(101,'CSE',2011);
+
+TAble Documents
+
+Doc_Id	DocName	DocYear 	
+101 	CSE 	2011
+102 	ECE 	2001
+103 	EEE 	1991
+104 	EEC 	1991
+105 	EMC 	2007
+
+TAble Newspaper
+
+Id	PaperName	PaperLang	Doc_Id 	
+105 	ABC 			1 	101
+106 	xyz 			2 	110
+103 	stu 			2 	111
+107 	PQR 			3 	107
+110 	QRS 			1 	102
+111 	OPR 			1 	103
+
+SELECT Documents.Doc_Id,Documents.DocName,Newspaper.PaperName
+FROM Documents
+RIGHT JOIN Newspaper
+ON Documents.Doc_Id=Newspaper.Doc_Id;
+
+Doc_Id	DocName	PaperName 	
+101 	CSE 	ABC
+102 	ECE 	QRS
+103 	EEE 	OPR
+NULL 	NULL 	xyz
+NULL 	NULL 	stu
+NULL 	NULL 	PQR
+
+SELECT Documents.Doc_Id,Documents.DocName,Newspaper.PaperName
+FROM Documents
+LEFT JOIN Newspaper
+ON Documents.Doc_Id=Newspaper.Doc_Id;
+
+Doc_Id	DocName	PaperName 	
+101 	CSE 	ABC
+102 	ECE 	QRS
+103 	EEE 	OPR
+104 	EEC 	NULL
+105 	EMC 	NULL 
+
+SELECT Documents.Doc_Id,Documents.DocName,Newspaper.PaperName
+FROM Documents
+INNER JOIN Newspaper
+ON Documents.Doc_Id=Newspaper.Doc_Id;
+
+Doc_Id	DocName	PaperName 	
+101 	CSE 	ABC
+102 	ECE 	QRS
+103 	EEE 	OPR
+

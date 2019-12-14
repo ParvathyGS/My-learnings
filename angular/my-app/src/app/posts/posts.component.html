@@ -1,0 +1,8 @@
+<ul class="posts" *ngIf="posts"> 
+    <li *ngFor="let post of posts"
+      [class.selected]="post === selectedPost"
+      (click)="onSelect(post)"> 
+      <span class="badge">{{post.id}}</span> {{post.title}}
+    </li>
+  </ul>
+  <app-post-details [post]="selectedPost"></app-post-details>

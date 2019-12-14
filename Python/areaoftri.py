@@ -1,0 +1,5 @@
+height = int(input("enter height"))
+breadth = int(input("enter breadth"))
+Area = 0.5 * (height * breadth)
+print("Area is : ")
+print(Area)

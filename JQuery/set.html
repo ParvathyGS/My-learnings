@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Set Content</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#btn1").click(function() {
+				$("#para1").text("Hello World!!");
+			});
+			$("#btn2").click(function() {
+				$("#para2").html("<b><i>Hello World!!</b></i>");
+			});
+			$("#formval").click(function() {
+				$("#inp1").val("Parvathy");
+			});
+		});
+	</script>
+</head>
+<body>
+	<p id="para1">this is a paragraph</p>
+	<p id="para2">this is another paragraph</p>
+	<form>
+		<label>Name</label>
+		<input id="inp1" type="text" name="name" value="Arun">
+	</form><br>
+	<button id="btn1">Text</button>
+	<button id="btn2">Html</button>
+	<button id="formval">Form value</button>
+</body>
+</html>

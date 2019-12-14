@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>attr()</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#btn").click(function() {
+				var url1 = $("a").attr("href");
+				alert("Url : " + url1);
+			});
+		});
+	</script>
+</head>
+<body>
+	<a href="https://www.mashupstack.com/">MashupStack Website</a><br>
+	<button id="btn">Click to get the url</button>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>width()/height()</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("button").click(function() {
+				$("li").parentsUntil("p").css({"border":"3px solid green"});
+			});	
+		});
+	</script>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<div style="border : 1px solid yellow; width: 400px">
+	<p style="border: 1px solid black">para1-parent</p>
+		<ul style="border : 1px solid red;width: 300px">
+			<li>tea</li>
+			<li>coffee</li>
+		</ul>
+	<span style="border : 1px solid blue">span-element</span><br><br>
+	</div>
+	<button>click for parent of p</button>
+</body>
+</html>

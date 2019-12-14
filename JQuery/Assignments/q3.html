@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Day of Month</title>
+	<meta charset="utf-8">
+		<style type="text/css">
+		.mycss1{
+			color: green;
+			font-size: 35px;
+		}
+		.mycss2{
+			color: red;
+			font-size: 35px;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("button").click(function() {
+				var day;
+				day = $("#inp1").val();
+				if(day % 2 == 0) {
+					$('#demo').addClass("mycss1");
+					$('#demo').text("Its an Even Day");	
+				} else {
+					$('#demo').addClass("mycss2");
+					$('#demo').text("Its an Odd Day");	
+				}
+			});
+		});	
+	</script>
+</head>
+<body>
+	<p id="demo"></p>
+	<p>Enter the day of a date</p>
+	<input id="inp1" type="text" name="day">
+	<button>Submit</button>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form-Calculator</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			// $("#operation").change(function() {
+				//alert(operator);
+			$("#submit").click(function(e) {
+				var operator = $("#operation").val();
+				e.preventDefault();
+				var num1,num2,num3;
+				num1 = parseFloat($("#fnumb").val());
+				num2 = parseFloat($("#snumb").val());
+				// alert(num1);
+				if (operator == "+") {
+					 num1 = num1+num2;
+				} else if (operator == "-") {
+					 num1 -= num2;
+				} else if (operator == "*") {
+					 num1 *= num2; 
+				} else if (operator == "/") {
+					num1 /= num2;
+				} else {
+					alert("Invalid Operation")
+				}
+				$("#result").text("Result is " + num1);
+			});
+			});
+		// });
+	</script>
+</head>
+<body>
+
+	<h2><u>Arithmetic Calculation</u></h2><br>
+	<form>
+		<label><b>First Number</b></label>
+		<input id="fnumb" type="text"><br><br>
+		<label><b>Second Number</b></label>
+		<input id="snumb" type="text"><br><br>
+		<label><b>Select Arithmetic operation</b></label>
+		<select id="operation">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+		</select><br><br>
+		<input id="submit" type="submit" value="Result">
+		<p id="result"></p>
+	</form>	
+</body>
+</html>

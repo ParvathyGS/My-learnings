@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Text-Overflow</title>
+<style type="text/css">
+	.h11 {
+		white-space: nowrap;
+		border : 1px solid black;
+		width : 150px;
+		overflow: hidden;
+		text-overflow: clip;
+	}
+	.h11:hover {
+		overflow: visible;
+	}
+	.h12 {
+		white-space: nowrap;
+		border : 1px solid black;
+		width: 150px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.h12:hover {
+		overflow: visible;
+	}
+</style>
+</head>
+<body>
+	<h1>text overflow-clip</h1>
+	<p class="h11">this is an example to show how to demonstrate the text overflow by using clip and ellipsis.</p>
+	<h1>text-overflow-ellipsis</h1>
+	<p class="h12">this is an example to show how to demonstrate the text overflow by using clip and ellipsis.</p>
+</body>
+</html>

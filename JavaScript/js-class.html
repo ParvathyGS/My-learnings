@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>class</title>
+</head>
+<body>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		class Cars {
+			constructor(brand) {
+				this.carName  = brand;
+			} 
+			present() {
+			return "My new car is " + this.carName;
+		}
+		}
+		mycar = new Cars("vento");
+		document.getElementById("demo").innerHTML = mycar.present();
+
+	</script>
+
+
+</body>
+</html>

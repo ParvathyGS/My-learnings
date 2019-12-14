@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stop with parameter</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#start").click(function() {
+				$("div").animate({left : '250px'},3000);
+				$("div").animate({fontSize : '2.8em'},3000);
+			});
+			$("#stop").click(function() {
+				$("div").stop();
+			});
+			$("#stopall").click(function() {
+				$("div").stop(true);
+			});
+			$("#finish").click(function() {
+				$("div").stop(true,true);
+			});
+		});		
+	</script>
+	<style>
+		div {
+			background-color: #98bf21;
+			width: 150px;
+			height: 100px;
+			font-size: 25px;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<button id="start">Start</button>
+	<button id="stop">Stop</button>
+	<button id="stopall">Stop All</button>
+	<button id="finish">Stop but Finish</button><br><br>
+	<div>HELLO</div>
+</body>
+</html>

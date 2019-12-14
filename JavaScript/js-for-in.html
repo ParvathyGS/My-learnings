@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>For-in</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		var person = { fName : "john", Age : 60, eyeColor : "blue"};
+		var txt ="";
+		var x;
+		for (x in person) {
+			txt += person[x];
+		}
+		document.write(txt);
+		var arr = [23,45,67];
+		for (x of arr) {
+			document.write(x);
+
+
+		}
+	</script>
+</body>
+</html>

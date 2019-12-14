@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form-button</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#btn").click(function() {
+				alert("saved and submitted the form");
+			});
+		});
+	</script>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>Information Details</legend>
+			<label>Name</label>
+			<input type="text" name="name"><br><br>
+			<label>Password</label>
+			<input type="password" name=""><br><br>
+			<label>Email</label>
+			<input type="email" name=""><br><br>
+		</fieldset><br>
+			<input id="btn" type="submit" name="submit" value="Submit">
+	</form>
+</body>
+</html>

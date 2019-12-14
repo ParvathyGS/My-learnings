@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>array map</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		// var marks1 = [67,53,23,89,99];
+		// // var marks2 = marks1.map(myFunc);
+		// var text = "";
+		
+		// document.getElementById("demo").innerHTML = marks2;
+		// function myFunc(value) {
+		// 	return value * 2;
+		// }
+
+		// var marks1 = [67,53,23,89,99];
+		// var marks2 = marks1.filter(myFunc);
+		// var text = "";
+		
+		// document.getElementById("demo").innerHTML = marks2;
+		// function myFunc(value) {
+		// 	return value > 25;
+		// }
+
+		// var marks1 = [67,53,23,89,99];
+		// var sum = marks1.reduce(myFunc);
+		
+		
+		// document.getElementById("demo").innerHTML = "sum is " + sum ;
+		// function myFunc(total,value,index,array) {
+		// 	return total + value;
+		// }
+
+		// var marks1 = [67,53,23,89,78];
+		// var marks2 = marks1.some(myFunc);
+		// var text = "";
+		
+		// document.getElementById("demo").innerHTML = "the result is " + marks2;
+		// function myFunc(value) {
+		// 	return value > 90;
+		// }
+		// var marks1 = [67,53,23,89,78,23];
+		// var marks2 = marks1.lastIndexOf(23);
+		// var text = "";
+		
+		// document.getElementById("demo").innerHTML = marks2;
+		// function myFunc(value) {
+		// 	return value > 90;
+		// }
+
+		var marks1 = [67,53,23,89,78];
+		var marks2 = marks1.findIndex(myFunc);
+		var text = "";
+		
+		document.getElementById("demo").innerHTML = "the result is " + marks2;
+		function myFunc(value) {
+			return value < 30;
+		}
+	</script>
+
+</body>
+</html>

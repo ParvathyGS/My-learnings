@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<p style="margin-top: 3%;">
+  <img style="margin-left: 43%;" src="https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png?v=c78bd457575a" width="5%" height="5%">
+</p>
+<div style="margin-left: 40%;">
+    <form #form2="ngForm" (ngSubmit)="onSubmit(form2.value)"><br>
+        <label>Email</label><br>
+        <input type="text" ngModel name="email" #email="ngModel"><br>
+        <label>Password</label><br>
+        <input type="password" ngModel name="password" #password="ngModel"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>

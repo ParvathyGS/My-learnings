@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>slide</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 	<script>
+ 		$(document).ready(function() {
+ 			$("#h1").click(function() {
+ 				$("#p1").slideUp("slow");
+ 			});
+ 		});
+ 	</script>
+</head>
+<body>
+	<div id="h1" style="padding: 5px;border :1px solid black;background-color: grey;">Jquery Notes</div>
+	<div id="p1" style="padding: 50px;border :1px solid black;background-color: yellow;">With jQuery you can create a sliding effect on elements. jQuery has the following slide methods:
+	    slideDown()
+    	slideUp()
+    	slideToggle()
+	</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css() method</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("button").click(function() {
+				$(".para").css({"background-color":"yellow","font-size":"50px"});
+			});	
+		});
+	</script>
+	<style>
+		.para {
+			background-color: blue;
+			font-style: italic;
+		}	
+	</style>
+</head>
+<body>
+	<p class="para">This is paragraph 1</p>
+	<p class="para">This is paragraph 2</p>
+	<p class="para">This is some important text</p>
+<button> Change Background color of paragraph</button>
+</body>
+</html>

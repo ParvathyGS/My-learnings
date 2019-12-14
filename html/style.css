@@ -1,0 +1,16 @@
+	#b1 {
+		color :red;border-color: red;font-size: 20px;padding: 10px;font-weight: bold;
+		background-color: white;border-radius: 8px;display: inline-block;
+	}
+	#b2 {
+		color :white;background-color: blue;margin-left: 20px; border-radius: 8px;
+		font-weight: bold;padding: 10px;border-color: blue; font-size: 20px;display: inline-block;
+	}
+	#b3 {
+		color: white;background-color: blue;font-size: 12px;font-weight: bold;border-color: blue;
+		border-radius: 4px;padding: 20px;letter-spacing: 4px;width: 150px;transition-duration: 0.4s;display: inline-block;
+	}
+	#b3:hover {
+		color: white;background-color: green;font-size: 12px;font-weight: bold;
+		border-color: green;border-radius: 24px;padding: 20px;letter-spacing: 4px;width: 150px;display: inline-block;
+	}

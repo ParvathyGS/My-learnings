@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<form action="/books/addbooks/" method="POST">
+	{% csrf_token %}
+	<div style="padding-top: 50px;text-align: center;" class="form-group">
+		<label>Book Name :</label>
+		{{myform.book_name}}<br><br>
+		<label>Author Name :</label>
+		{{myform.author_name}}<br><br>
+		<label>Year published :</label>
+		{{myform.year}}
+	</div><br>
+	<input class="btn btn-success" style="margin-left: 650px;margin-top: 10px" 
+				type="submit" value="ADD BOOK">
+</form>
+<button class="btn btn-success" style="margin-left: 650px;" 
+		onclick="window.location.href ='http://localhost:8000/books/intro-page/';">GO BACK</button>

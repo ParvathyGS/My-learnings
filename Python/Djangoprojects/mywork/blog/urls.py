@@ -1,0 +1,35 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+	# path('insert_blog',views.insert_blog,name = 'insert_blog')]
+	#path('showBlog/<int:requested_blog_id>',views.showBlog, name = 'showBlog'),
+	#path('showAll/',views.showAll, name = 'showAll'),
+	#path('<int:requested_blog_id>/showBlogDetails/',views.showBlogDetails,name='showBlogDetails'),
+	#path('showFilter/',views.showFilter, name = 'showFilter'),
+	# path('sqlUpdate/',views.sqlUpdate,name='sqlUpdate'),
+	#path('edit_blog/<int:requested_blog_id>/',views.edit_blog,name='edit_blog'),
+	# path('delete_blog/<int:requested_blog_id>/',views.delete_blog,name='delete_blog'),
+	#path('delete_entry/<int:requested_blog_id>/',views.delete_entry,name='delete_entry'),
+	#path('listBlogs/',views.listBlogs,name='listBlogs'),
+	#path('create_user/',views.create_user,name='create_user'),
+	# path('change_password/',views.change_password,name='change_password'),
+	# path('authen_users/',views.authen_users,name='authen_users'),
+	# path('authen_web_request/',views.authen_web_request,name='authen_web_request'),
+	# path('signup/',views.signup,name='signup'),
+	# path('login_user/',views.login_user,name='login_user'),
+	# path('logout_view/',views.logout_view,name='logout_view'),
+	# path('message_Add/',views.message_Add,name='message_Add'),
+	# path('upload-file/',views.upload_file,name='upload_file'),
+	# path('showImage/',views.showImage,name='showImage'),
+	#path('sendMail/',views.sendMailToUser,name='sendMailToUser'),
+	# path('abcd/',views.sample_ajax_view,name='sample_ajax_view'),
+	# path('sampleView/',views.sample_view,name='sample_view'),
+	#path('someView/',views.some_view,name='some_view'),	 
+	#path('html2pdf/',views.html_to_pdf_view,name='html_to_pdf_view'),
+	#path('linkCallback/',views.link_callback,name='link_callback'),
+	# path('login/',views.login,name='login'),
+	# path('sampleapi/',views.sample_api,name= 'sample_api'),
+	#path('sampledata/',views.sample_data,name= 'sample_data'),
+	path('sampleput/<int:requested_blog_id>/',views.sample_put,name= 'sample_put'),
+	]

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dom</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<p class="z">hello</p>
+	<p class="d">welcome</p>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		var x = document.querySelectorAll("p.z");
+				document.getElementById("demo").innerHTML = 'the content is  ' + x[0].innerHTML;
+	</script>
+</body>
+</html>

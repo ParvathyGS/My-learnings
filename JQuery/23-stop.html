@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> animation queue</title>
+ 	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 	<script>
+ 		$(document).ready(function() {
+ 			$("#d1").click(function() {
+ 				$("#d2").slideDown("slow");
+ 			});
+ 			$("button").click(function() { 
+ 				$("#d2").stop();
+ 			}) 
+ 		});
+
+ 	</script>
+ 	<style>
+ 		#d1 {
+ 			background-color: grey;
+ 			height: 40px;
+ 			width: 500px;
+ 			border : 1px solid black;
+ 		}
+ 		#d2 {
+ 			background-color: grey;
+ 			height: 90px;
+ 			width: 500px;
+ 			border : 1px solid black;
+ 			display: none;
+ 		}
+ 	</style>
+ </head>
+ <body>
+ 	<button>Click to stop</button><br><br>
+ 	<div id="d1">Jquery</div>
+ 	<div id="d2">jQuery is a JavaScript Library.jQuery greatly simplifies JavaScript programming. </div>
+ </body>
+ </html>

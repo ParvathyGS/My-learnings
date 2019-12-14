@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>fade toggle</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 	<script>
+ 		$(document).ready(function() {
+ 			$("button").click(function() {
+ 				$("#d1").fadeToggle();
+ 				$("#d2").fadeToggle("slow");
+ 				$("#d3").fadeToggle(2000);
+ 			});
+ 		});
+ 	</script>
+</head>
+<body>
+	<button>click to Fade Toggle</button>
+	<div id="d1" style="background-color: red;width: 40px;height: 40px;"></div><br>
+	<div id="d2" style="background-color: pink;width: 40px;height: 40px;"></div><br>
+	<div id="d3" style="background-color: yellow;width: 40px;height: 40px;"></div>
+</body>
+</html>

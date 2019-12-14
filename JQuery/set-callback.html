@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>set-callback</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#btn1").click(function() {
+				$("#para1").text(function(i,origText) {
+					return "Old text :" + origText + " New Text : HELLO WORLD " + "Index :" + i; 
+				});
+			});
+			$("#btn2").click(function() {
+				$("#para2").html(function(i,origText) {
+					return "Old Text : " + origText + "New Text : <b>Welcome</b> back!!" + "Index : " + i;
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<p id="para1">this is a <b>bold</b> paragraph</p>
+	<p id="para2">this is another<b>bold</b> paragraph</p>
+	<button id="btn1">Show old/new text</button>
+	<button id="btn2">Show old/new html</button>
+</body>
+</html>

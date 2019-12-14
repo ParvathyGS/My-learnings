@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array Sort</title>
+</head>
+<body>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		var points = [45,25,80,75,60,90,35,95];
+		function randArr() {
+			points.sort(function(a,b){return 0.5 - Math.random()});
+			document.getElementById('demo').innerHTML = points;
+		}
+	</script>
+		<button type="button" onclick="randArr()">Click for random array</button>
+</body>
+</html>

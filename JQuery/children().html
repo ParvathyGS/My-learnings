@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>width()/height()</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("button").click(function() {
+			//	$("div").children("p.first").css({"color":"red"});
+				$("p").siblings().css({"color":"red"});
+			});	
+		});
+	</script>
+	<style>
+.siblings * { 
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style>
+</head>
+<body>
+<body class="siblings">
+
+<div>div (parent)
+  <p>p</p>
+  <span>span</span>
+  <h2>h2</h2>
+  <h3>h3</h3>
+  <h4>h4</h4>
+  <p>p</p>
+</div>
+	<button>children of div</button>
+</body>
+</html>

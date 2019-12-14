@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add class</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("button").click(function() {
+				$("h1,p").addClass("para");
+				$("div").addClass("impt");
+			});	
+		});
+	</script>
+	<style>
+		.para {
+			color: blue;
+			font-style: italic;
+		}
+		.impt {
+			color: red;
+			font-family: bold;
+			font-size: 30px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Add class example</h1>
+	<p>This is paragraph 1</p>
+	<p>This is paragraph 2</p>
+	<div>This is some important text</div>
+<button>Add classes</button>
+</body>
+</html>

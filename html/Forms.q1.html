@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+c<head>
+</head>
+<body>
+	<!-- <form> -->
+		<fieldset>
+			<legend>Personal Information</legend>
+				<label>First Name</label>
+				<input type="text" name="fname" required="required" maxlength="25" placeholder="First Name"><br><br>
+				<label>Last Name</label>
+				<input type="text" name="lname" required="required" maxlength="25" placeholder="Second Name"><br><br>
+				<label>E-mail</label>
+				<input type="email" name="email" value="test@example.com" required="required" autofocus="autofocus">
+				<br><br>
+				<label>Password</label>
+				<input type="password" name="psw" required="required" min="6"><br><br>
+		</fieldset><br><br>
+		<label>Select Category</label>
+		<select name="category">
+			<option>student</option>	
+			<option>employee</option>
+			<option selected="selected">freelancer</option>
+		</select>
+		<br><br>
+		<label>Event Date</label>
+		<input type="date" name="eventdate" required="required"><br><br>
+		<label>Select no:of Tickets</label><br>
+		<input type="radio" name="Ticket" value="1 Ticket">
+		<label>1 Ticket</label>
+		<input type="radio" name="Ticket" value="2 Tickets" checked="checked">
+		<label>2 Tickets</label>
+		<input type="radio" name="Ticket" value="3 Tickets">
+		<label>3 Tickets</label><br><br>
+		<label>Select Payment  :</label>
+		<label>Online Payment</label>
+		<input type="checkbox" name="olpayment" value="Online Payment" checked="checked"><br><br>
+		<label>Notes</label><br>
+		<textarea name="txtarea" rows="20" cols="30" placeholder="Please write your comments"></textarea><br><br>
+		<input type="submit" value="submit"><br><br>
+		<input type="reset" value="reset">
+		</select>	
+	<!-- </form> -->
+</body>
+</html>

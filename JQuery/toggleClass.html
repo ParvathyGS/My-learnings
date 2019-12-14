@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>toggleClass</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("button").click(function() {
+				$("h1,p").toggleClass("para");
+				
+			});	
+		});
+	</script>
+	<style>
+		.para {
+			color: blue;
+			font-style: italic;
+		}	
+	</style>
+</head>
+<body>
+	<p class="para">This is paragraph 1</p>
+	<p class="para">This is paragraph 2</p>
+	<p class="para">This is some important text</p>
+<button>Toggle classes</button>
+</body>
+</html>

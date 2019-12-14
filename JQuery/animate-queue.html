@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> animation queue</title>
+ 	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 	<script>
+ 		$(document).ready(function() {
+ 			$("button").click(function() {
+ 				var div = $("div");
+ 				div.animate({height : '300px'},"slow");
+ 				div.animate({width : '300px'},"slow");
+ 				div.animate({height : '100px'},"slow");
+ 				div.animate({width :'100px'},"slow")
+ 			});
+ 		});
+ 	</script>
+ 	<style>
+ 		.dd {
+ 			background-color: #98bf21;
+ 			height: 100px;
+ 			width: 100px;
+ 			position: absolute;
+ 		}
+ 	</style>
+</head>
+<body>
+	<button>Start Animation</button><br><br>
+	<div class="dd"></div>
+</body>
+</html>

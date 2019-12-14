@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>width()/height()</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("button").click(function() {
+				var txt =" ";
+				txt += "width of div : " + $(".div1").width() + "</br>";
+				txt += "height of div : " + $(".div1").height() + "</br>";
+				txt += "Innerwidth of div : " + $(".div1").innerWidth() + "</br>";
+				txt += "Innerheight of div : " + $(".div1").innerHeight() + "</br>";
+				txt += "Outerwidth of div : " + $(".div1").outerWidth() + "</br>";
+				txt += "Outerheight of div : " + $(".div1").outerHeight() + "</br>";
+				txt += "Outerwidth(true) of div : " + $(".div1").outerWidth(true) + "</br>";
+				txt += "Outerheight(true) of div : " + $(".div1").outerHeight(true);
+				$(".div1").html(txt);
+			});	
+		})
+	</script>
+	<style>
+		.div1 {
+			height: 200px;
+			width: 400px;
+			padding: 10px;
+  			margin: 3px;
+			background-color: lightblue;
+			border: 1px solid black;
+			font-style: italic;
+		}	
+	</style>
+</head>
+<body>
+	<div class="div1"></div><br><br>
+	<button>Display dimensions of above div</button>
+</body>
+</html>

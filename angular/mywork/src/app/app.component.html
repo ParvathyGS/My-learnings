@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+      <div style="text-align:center;margin: auto;">
+        <h1>
+          Welcome to {{ title }}! <!-- Display variable -->
+        </h1>
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-10">
+        <a routerLink="posts">Posts</a>
+        <router-outlet></router-outlet>
+      </div>
+      <div class="col-md-2">
+        <app-messages></app-messages>
+      </div>
+    </div>
+  </div>

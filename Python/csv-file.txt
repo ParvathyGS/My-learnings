@@ -1,0 +1,6 @@
+id,name,product,price
+100,arun,Mouse,1000
+103,Paru,Pendrive,700
+105,anil,book,200
+106,sini,pen,50
+107,ciju,marker,30

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Push-pull Layout</title>
+	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<style type="text/css">
+		.nav {
+			/*height: 60px;*/
+			background-color: #0e64ed;
+			color: #ffffff;
+			font-weight: bold;
+			font-size: 20px;
+			text-align: center;
+		}
+		.content {
+			/*width: 20%;*/
+			/*height: 150px;*/
+			background-color: #f59f16;
+			color: #ffffff;	
+			font-weight: bold;
+			font-size: 20px;
+			text-align: center;
+		}
+		.widget {
+		/*	width: 20%;*/
+			/*height: 60px;*/
+			background-color: #ff032d;
+			color: #ffffff;
+			font-weight: bold;
+			font-size: 20px;
+			text-align: center;
+		}
+		.no-gutter > [class*='col-'] {
+  			padding-right: 0;
+    		padding-left: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row no-gutter"><br>
+			<div class="col-xs-12 col-md-4">
+				<div class="nav" style="height: 60px;">NAV</div>
+			</div>
+			<div class="col-xs-12 col-md-4 col-md-push-4">
+				<div class="widget" style="height: 60px;">WIDGET</div>
+			</div>
+			<div class="col-xs-12 col-md-4 col-md-pull-4">
+				<div class="content" style="height: 60px;">CONTENT</div>	
+			</div>
+		</div>	
+	</div>
+</body>
+</html>

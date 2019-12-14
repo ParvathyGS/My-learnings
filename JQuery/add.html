@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>add elements</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#btn1").click(function() {
+				$("p").prepend("<b>Appended text</b>");
+			});
+			$("#btn2").click(function() {
+				$("ol").append("<li>Appended text</li>");
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>this is paragraph 1.</p>
+	<p>this is paragraph 2.</p>
+	<ol>
+		<li>tea</li>
+		<li>coffee</li>
+	</ol>
+	<button id="btn1">Append text to paragraph</button></br>
+	<button id="btn2">Append text to list</button>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>events-focus/blur</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 	<script>
+ 		$(document).ready(function() {
+ 			$("input").focus(function() {
+ 				$(this).css("background-color","yellow");
+ 			});
+ 		});
+ 	</script>
+ 	<script>
+ 		$(document).ready(function() {
+ 			$("input").blur(function() {
+ 				$(this).css("background-color","grey");
+ 			});
+ 		});
+ 	</script>
+ </head>
+ <body>
+ 	<form>
+ 		Name: <input type="text" name="fname"><br>
+ 		University : <input type="text" name="univ"><br>
+ 	</form>
+
+ </body>
+ </html>

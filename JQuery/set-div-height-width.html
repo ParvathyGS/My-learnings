@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>width()/height()</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("button").click(function() {
+				$(".div1").width(500).height(400);
+			});	
+		})
+	</script>
+	<style>
+		.div1 {
+			height: 200px;
+			width: 400px;
+			padding: 10px;
+  			margin: 3px;
+			background-color: lightblue;
+			border: 1px solid black;
+			font-style: italic;
+		}	
+	</style>
+</head>
+<body>
+	<div class="div1"></div><br><br>
+	<button>Resize div</button>
+</body>
+</html>

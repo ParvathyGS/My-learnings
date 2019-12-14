@@ -1,0 +1,13 @@
+
+<ul>
+{% for c in blog %}
+	<h3>Name, Tagline</h3>	
+	<li>{{ c.name }}</li>
+	<li>{{ c.tagline }}</li>
+<!-- 	<a href="/blog/showBlog/{{ c.id }}">Blog {{ c.id }}</a><br> -->
+	<a href="/blog/delete_entry/{{ c.id }}">Delete Blog {{ c.id }}</a><br>
+{% endfor %}
+</ul>
+
+
+	

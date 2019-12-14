@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<div class="container">	
+	<h1 style="text-align: center;padding-top: 20px;">Library Management System</h1>
+	<br>
+	<a href="/books/addbooks/" class="btn btn-success" role="button" 
+							style="margin-left: 975px;width: 150px">ADD NEW BOOKS</a><br><br>
+											
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>BOOK ID</th>
+			<th>BOOK NAME</th>
+			<th>VIEW BOOK DETAILS</th>
+			<th>EDIT BOOK DETAILS</th>
+			<th>DELETE BOOK DETAILS</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for instance in book %}
+		<tr>
+			<td>{{instance.id}}</td>
+			<td>{{instance.book_name}}</td>
+			<td><a href="/books/viewbooks/{{instance.id}}" 
+							class="btn btn-success" role="button">VIEW</a></td>
+			<td><a href="/books/editbooks/{{instance.id}}" 
+							class="btn btn-warning" role="button">EDIT</a></td>
+			<td><a href="/books/deletebooks/{{instance.id}}" 
+							class="btn btn-danger" role="button">DELETE</a></td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+</div>

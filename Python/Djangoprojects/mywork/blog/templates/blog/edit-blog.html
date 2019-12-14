@@ -1,0 +1,5 @@
+<form action="/blog/edit_blog/{{ blog_id }}/" method="POST">
+	{% csrf_token %}
+    {{form}}
+    <button class="btn btn-success text-right" type="submit">Submit-Edit</button>
+</form>

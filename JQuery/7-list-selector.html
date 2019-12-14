@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>list selectors</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 	<script>
+ 		$(document).ready(function() {
+ 			$("button").click(function() {
+ 				$("ul li:first-child").hide();
+ 			});
+ 		});
+ 	</script>
+ 	<script>
+ 		$(document).ready(function() {
+ 			$("a[target!='_blank']").click(function(){
+ 				$(this).hide();
+ 			});
+ 		});
+ 	</script>
+</head>
+<body>
+	<ul>
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Juice</li>
+	</ul>
+	<ul>
+		<li>Male</li>
+		<li>Female</li>
+		<li>Children</li>
+	</ul>
+	<a href="" target="_self">LINK1</a><br>
+	<a href="" target="_blank">LINK2</a><br>
+	<a href="" target="_blank">LINK3</a><br>
+	<button>Click here</button>
+</body>
+</html>

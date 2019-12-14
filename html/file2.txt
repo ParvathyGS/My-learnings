@@ -1,0 +1,16 @@
+<html>
+
+<head>
+
+<title> Example of links </title>
+
+</head>
+
+<body>
+
+<a href="file1.html"> </a>
+
+</body>
+
+</html>
+

@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<div class="container">
+  <div class="row">
+    <ul class="question" *ngIf="question_arr.data">
+      <li *ngFor="let question of question_arr.data">
+        <span class="badge">{{ question. id }}</span> {{ question. title }}
+      </li>
+    </ul>
+  </div>
+</div>
+ 
+
+
+
+<!-- <div class="container">	<br>
+    <div class="row" style="margin-left: 45%;">
+          <form #form3="ngForm" (ngSubmit)="onsubmit(form3.value)">
+            <label>Title</label><br>
+            <input type="text" ngModel name="title" #title="ngModel"><br>
+            <label>Question</label><br>
+            <input type="text" ngModel name="question" #question="ngModel"><br><br>
+            <input type="submit" value="submit">
+          </form>
+    </div> -->
+

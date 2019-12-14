@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form-Validation</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.myStyle {
+			border : 1px solid red;
+		}
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#submit").click(function(e) {
+				e.preventDefault();
+				$("#myForm").validate({ 
+				rules : {
+					name : {
+						required : true,
+						minlength : 3,
+					},
+					email : {
+						required : true,
+						email : true,
+					},
+					pswd1 : {
+						required : true,
+						minlength : 8,
+					},
+					pswd2 : {
+						required : true,
+						minlength : 8,
+						equalTo : "#pswd1",
+					},
+				},
+				messages : {
+					name : {
+						required : 'Please enter your name',
+						minlength :'Name should be in atleast 3 characters in length.',
+					},
+					email : 'Enter a valid email Id.',
+					pswd1 : {
+						required : 'Please enter a password',
+						minlength : 'Password should be atleast 8 characters in length.',
+						},
+					pswd2 : {
+						required : 'Please confirm the password',
+						minlength : 'Password should be atleast 8 characters in length.',
+						equalTo : 'Password should match.',
+						},
+					},
+					});
+				});
+			});
+	</script>
+</head>
+<body>
+	<form id="myForm"><br><br>
+		<label>Name</label>
+		<input type="text" id="name" name="name"><br><br>
+		<label>Email Id</label>
+		<input type="email" id="email"><br><br>
+		<label>Password</label>
+		<input id="pswd1" type="password" name="password"><br><br>
+		<label>Confirm Password</label>
+		<input id="pswd2" type="password" name="cpassword"><br><br>
+		<input id="submit" type="submit" name="submit" value="Submit">
+	</form>
+</body>
+</html>

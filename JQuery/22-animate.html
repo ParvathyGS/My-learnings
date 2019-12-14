@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery Animation</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 	<script>
+ 		$(document).ready(function() {
+ 			$("button").click(function() {
+ 				$(".dd").animate({
+ 					left : '250px',
+ 					height : '200px',
+ 					width : '200px',
+ 					opacity : '0.9'
+ 				});
+ 			});
+ 		});
+ 	</script>
+ 	<style>
+ 		.dd {
+ 			background-color: pink;
+ 			height: 100px;
+ 			width: 100px;
+ 			position: absolute;
+ 		}
+ 	</style>
+</head>
+<body>
+	<div>To see the animation please click the button below </div><br>
+	<button>Start Animation</button><br><br>
+	<div style="opacity: 0.4" class="dd"></div>
+</body>
+</html>

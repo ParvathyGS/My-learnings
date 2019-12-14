@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        .p1 {
+              padding-right: 30px;
+              padding-left: 80px;
+              padding-top: 50px;
+              padding-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="p1">
+        <p>Helo how are you?</p>
+    </div>
+</body>
+</html>
