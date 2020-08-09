@@ -1,0 +1,46 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="container">
+  <div class="row">
+    
+    <div *ngIf="question"> 
+      <h2 class="head-3 Question">QUESTION {{ question. id }} 
+        <span>
+          <a routerLink="/answer-question/{{question.id}}" class="btn btn-primary button1">Add Answer</a>
+        </span>
+      </h2>
+      <div style="border: 2px solid black;border-radius: 1%;padding: 3%;">
+        <span style="float: right;">
+        <button (click)="likeQuestion()" class="like">
+          <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+          <p style="padding-top:55%;">{{likeCount}} likes</p>
+        </button>
+           <button (click)="dislikeQuestion()" class="dislike">
+            <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+            <p style="padding-top: 55%;">{{dislikeCount}} dislikes</p>
+          </button>
+      </span>
+        <div><span class="style1">Id : </span>{{question.id}}</div> <br>
+        <div><span class="style1">Title : </span>{{question.title}}</div> <br>
+        <div><span class="style1">Content : </span>{{question.question}}</div> <br>
+  
+        <h2>Answers</h2>
+        <ul style="list-style: none;background-color:cornflowerblue " class="Question" *ngIf="question.answers"> 
+            <li class="list-group-item" *ngFor="let ans of question.answers">
+                <div><span style="font-weight: bold;">Answer by userId: {{ans.user_id}}:</span>{{ans.answer}}</div><br>
+                <div *ngIf = "questionService.getuserId() == ans.user_id">
+                  <a routerLink="/editanswer/{{ans.id}}" class="btn btn-primary button1">Edit Answer</a><br><br>
+                  <a routerLink="/deleteanswer/{{ans.id}}" class="btn btn-primary button1">Delete Answer</a><br>
+                </div>
+            </li> 
+        </ul>
+      </div>
+    </div> 
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Football Scheduler</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+  	<h3 style="font-weight: bold;text-align: center;color: blue">SQUAD LIST</h3>
+		<table class="table table-bordered table-stripped">
+                <thead>
+                    <tr>
+                    	<th>TEAM ID</th>
+                        <th>TEAM NAME</th>
+                        <th>PLAYER NAME 1</th>
+                        <th>PLAYER NAME 2</th>
+                        <th>PLAYER NAME 3</th>
+                        <th>PLAYER NAME 4</th>
+                        <th>PLAYER NAME 5</th>
+                        <th>PLAYER NAME 6</th>
+                        <th>PLAYER NAME 7</th>
+                        <th>PLAYER NAME 8</th>
+                        <th>PLAYER NAME 9</th>
+                        <th>PLAYER NAME 10</th>
+                        <th>PLAYER NAME 11</th>
+                        <th>COACH NAME</th>
+                        <th>MANAGER NAME 1</th>
+                        <th>MANAGER NAME 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for instance in squad %}
+                    <tr>
+                        <td>{{instance.id}}</td>
+                        <td>{{instance.TeamName}}</td>
+                        <td>{{instance.Player1}}</td>
+                        <td>{{instance.Player2}}</td>
+                        <td>{{instance.Player3}}</td>
+                        <td>{{instance.Player4}}</td>
+                        <td>{{instance.Player5}}</td>
+                        <td>{{instance.Player6}}</td>
+                        <td>{{instance.Player7}}</td>
+                        <td>{{instance.Player8}}</td>
+                        <td>{{instance.Player9}}</td>
+                        <td>{{instance.Player10}}</td>
+                        <td>{{instance.Player11}}</td>
+                        <td>{{instance.Coach}}</td>
+                        <td>{{instance.Manager1}}</td>
+                        <td>{{instance.Manager2}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+    </div>
+</div>

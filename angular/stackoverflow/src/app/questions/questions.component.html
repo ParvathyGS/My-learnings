@@ -4,28 +4,17 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="container">
   <div class="row">
-    <ul class="question" *ngIf="question_arr.data">
-      <li *ngFor="let question of question_arr.data">
-        <span class="badge">{{ question. id }}</span> {{ question. title }}
+    <h2 class="head-3">QUESTIONS</h2>
+    <a style="float: right;" routerLink='/ask-questions' class="btn btn-primary">Ask Question</a><br><br>
+    <ul style="list-style: none;background-color:cornflowerblue " class="Question" *ngIf="question_arr.data">
+      <li class="list-group-item" *ngFor="let question of question_arr.data" style="padding-right: 3%;">
+          <a routerLink='/show-question/{{ question. id }}'>
+          <span class="badge">{{ question. title }}</span> </a>      
       </li>
     </ul>
   </div>
 </div>
- 
-
-
-
-<!-- <div class="container">	<br>
-    <div class="row" style="margin-left: 45%;">
-          <form #form3="ngForm" (ngSubmit)="onsubmit(form3.value)">
-            <label>Title</label><br>
-            <input type="text" ngModel name="title" #title="ngModel"><br>
-            <label>Question</label><br>
-            <input type="text" ngModel name="question" #question="ngModel"><br><br>
-            <input type="submit" value="submit">
-          </form>
-    </div> -->
-

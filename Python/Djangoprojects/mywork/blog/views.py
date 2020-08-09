@@ -67,16 +67,16 @@ def sample_data(request):
     return Response(serializer.data)    
 
 '''
-@csrf_exempt
-@api_view(["PUT"])
-def sample_put(request,blog_id):
+# @csrf_exempt
+# @api_view(["PUT"])
+# def sample_put(request,blog_id):
 
-    blog = Blog.objects.get(id=blog_id)
-    serializer = BlogSerializer(blog,data=request.data)
-    if serializer.is_valid():
-        serializer.save()
-        return Response(serializer.data)
-    return Response(serializer.errors,status=HTTP_400_BAD_REQUEST)    
+#     blog = Blog.objects.get(id=blog_id)
+#     serializer = BlogSerializer(blog,data=request.data)
+#     if serializer.is_valid():
+#         serializer.save()
+#         return Response(serializer.data)
+#     return Response(serializer.errors,status=HTTP_400_BAD_REQUEST)    
     
 '''
 #PDF FILES
@@ -149,12 +149,12 @@ def sample_ajax_view(request):
     blog = Blog.objects.all().values()
     data = list(blog)
     return JsonResponse(data,safe=False)
-
+'''
 def sample_ajax_view(request):  
     
     data = {"name":"parvathy"}
     return JsonResponse(data)
-
+'''
 def sample_view(request):
     return render(request,"blog/ajax_template.html")
 '''

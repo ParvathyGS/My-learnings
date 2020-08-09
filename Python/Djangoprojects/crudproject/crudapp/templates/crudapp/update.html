@@ -1,0 +1,5 @@
+<form action="/crudapp/updatedata/{{userid}}/" method='post'>
+	{% csrf_token %}
+	{{data}}
+	<input type="submit" name="submit" value="submit">
+</form>

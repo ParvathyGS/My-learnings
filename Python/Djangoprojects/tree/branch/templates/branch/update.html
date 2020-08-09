@@ -1,0 +1,7 @@
+
+<form action="/branch/{{ blog_id }}/update/" method="post">
+	 {% csrf_token %}
+     {{blogform}}
+     <button class="btn btn-success text-right" type="submit">Edit</button>
+
+</form>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Football Scheduler</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Football Scheduler</h1>
+  <p>Lets start the game...!</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+  	<form action="/footballapp/teamregister/" method="POST">
+	{% csrf_token %}
+	<div style="padding-top: 50px;text-align: center;" class="form-group">
+		<label>Team Name :</label>
+		{{myform.TeamName}}<br><br>
+		<label>Player Name 1 :</label>
+		{{myform.Player1}}<br><br>
+		<label>Player Name 2 :</label>
+		{{myform.Player2}}<br><br>
+		<label>Player Name 3 :</label>
+		{{myform.Player3}}<br><br>
+		<label>Player Name 4 :</label>
+		{{myform.Player4}}<br><br>
+		<label>Player Name 5 :</label>
+		{{myform.Player5}}<br><br>
+		<label>Player Name 6 :</label>
+		{{myform.Player6}}<br><br>
+		<label>Player Name 7 :</label>
+		{{myform.Player7}}<br><br>
+		<label>Player Name 8 :</label>
+		{{myform.Player8}}<br><br>
+		<label>Player Name 9 :</label>
+		{{myform.Player9}}<br><br>
+		<label>Player Name 10 :</label>
+		{{myform.Player10}}<br><br>
+		<label>Player Name 11 :</label>
+		{{myform.Player11}}<br><br>
+		<label>Coach Name :</label>
+		{{myform.Coach}}<br><br>
+		<label>Manager Name 1 :</label>
+		{{myform.Manager1}}<br><br>
+		<label>Manager Name 2 :</label>
+		{{myform.Manager2}}<br><br>
+	</div><br>
+	<input class="btn btn-success" style="margin-left: 500px;"  
+				type="submit" value="REGISTER TEAM">
+	</form></div><br>
+<button class="btn btn-success" style="margin-left: 500px;" 
+		onclick="window.location.href ='http://localhost:8000/footballapp/';">GO BACK</button>
+</div>
+</div>

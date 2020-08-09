@@ -5,15 +5,17 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-<p style="margin-top: 3%;">
-  <img style="margin-left: 43%;" src="https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png?v=c78bd457575a" width="5%" height="5%">
-</p>
-<div style="margin-left: 40%;">
-    <form #form2="ngForm" (ngSubmit)="onSubmit(form2.value)"><br>
-        <label>Email</label><br>
-        <input type="text" ngModel name="email" #email="ngModel"><br>
-        <label>Password</label><br>
-        <input type="password" ngModel name="password" #password="ngModel"><br><br>
-        <input type="submit" value="Submit">
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <div class="fadeIn first">
+      <img src="https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png?v=c78bd457575a" width="25%" height="25%">
+    </div>
+    <form class="form-group" #form2="ngForm" (ngSubmit)="onSubmit(form2.value)"><br>
+      <label>Email</label><br>
+      <input type="text" class="fadeIn second" ngModel name="email" #email="ngModel"><br>
+      <label>Password</label><br>
+      <input type="password" class="fadeIn third" ngModel name="password" #password="ngModel"><br>
+      <input type="submit" class="fadeIn fourth"  value="Log In">
     </form>
+  </div>
 </div>

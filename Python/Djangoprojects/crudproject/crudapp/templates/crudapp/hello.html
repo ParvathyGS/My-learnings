@@ -1,0 +1,34 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'crudapp/style.css' %}">
+
+<p>Hello Welcome to crud app</p>
+
+
+
+<table style="border: 1px solid black">
+	<thead>
+		<tr >
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Age</th>
+			<th>Email</th>
+			<th>Edit Details</th>
+			<th>Delete Details</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for instance in modeldata %}
+		<tr>
+			<td>{{instance.first_name}}</td>
+			<td>{{instance.last_name}}</td>
+			<td>{{instance.age}}</td>
+			<td>{{instance.email}}</td>
+			<td><a href="/crudapp/updatedata/{{instance.id}}/" type="button">EDIT</a><br></td>
+			<td><a href="/crudapp/deletedata/{{instance.id}}/" type="button">DELETE</a><br></td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+<a href="/crudapp/insertdata/" type="button">ADD USER</a><br>
+

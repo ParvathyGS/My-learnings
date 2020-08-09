@@ -5,16 +5,21 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-<div class="container" style="text-align: center;"><br>
-    <form #kk="ngForm" (ngSubmit)="onSubmit(kk.value)"><br>
-        <label>Display Name</label><br>
-        <input type="text" ngModel name="name" #name="ngModel"><br>
-        <label>Email</label><br>
-        <input type="text" ngModel name="email" #email="ngModel"><br>
-        <label>Password</label><br>
-        <input type="password" ngModel name="password" #password="ngModel"><br>
-        <label>Confirm Password</label><br>
-        <input type="password" ngModel name="password_confirmation" #password_confirmation="ngModel"><br><br>
-        <input type="submit" value="Submit">
-    </form>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <div class="fadeIn first">
+            <img src="https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png?v=c78bd457575a" width="15%" height="15%">
+        </div>
+        <form class="form-group" #kk="ngForm" (ngSubmit)="onSubmit(kk.value)"><br>
+            <label>Display Name</label><br>
+            <input type="text" ngModel name="name" #name="ngModel"><br>
+            <label>Email</label><br>
+            <input type="text" ngModel name="email" #email="ngModel"><br>
+            <label>Password</label><br>
+            <input type="password"  ngModel name="password" #password="ngModel"><br>
+            <label>Confirm Password</label><br>
+            <input type="password" ngModel name="password_confirmation" #password_confirmation="ngModel"><br><br>
+            <input type="submit" class="fadeIn fourth" value="Submit">
+        </form>
+    </div>
 </div>

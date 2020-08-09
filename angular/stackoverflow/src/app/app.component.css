@@ -11,7 +11,7 @@
 }
 .py128 {
     padding-top: 7% !important;
-    padding-bottom: 10% !important;
+    padding-bottom: 15% !important;
     }
 
 .main-head {
@@ -26,3 +26,9 @@
     font-size: 160%;
 }
 
+.button-1 {
+    margin-left: 40%;
+    margin-right:2%;
+    color: chocolate;
+    border:1px solid chocolate;
+}

@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<div class="container">
+  <div class="row">
+    <h2 class="head-3">MY QUESTIONS</h2>
+    <ul style="list-style: none;background-color: cornflowerblue;" class="Questions" *ngIf="myquestion_arr.data">
+      <li class="list-group-item" *ngFor="let question of myquestion_arr.data">
+        <div class="style1">
+          <span> 
+            <span class="badge">Question Id:</span> {{ question.id }} <br>
+            <span class="badge">Title:</span> {{ question.title }} <br>
+            <span class="badge">Question:</span> {{ question.question }}
+          </span><br><br>
+          <span>
+            <a routerLink="/editquestion/{{question.id}}" type="button" class="btn btn-primary">Edit Question</a>
+            <a routerLink="/deletequestion/{{question.id}}" type="button" class="btn btn-primary" style="margin-left: 2%;">Delete Question</a>
+          </span>
+          </div>
+      </li>
+    </ul>
+  </div>
+</div>

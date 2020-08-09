@@ -1,0 +1,17 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<div class="container">
+  <div class="row">
+    <h2 class="head-3 ">EDIT QUESTION</h2>
+    <form class="form-group" #form6="ngForm" (ngSubmit)="editQuestion(form6.value)">
+      <label>Edited Question</label><br>
+      <input type="text" class="form-control" ngModel name="question" #question="ngModel" placeholder="Enter your question.." size="50"><br><br>
+      <input type="submit" class="btn btn-success" value="Submit Question">
+    </form>
+  </div>
+</div>

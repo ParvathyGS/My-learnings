@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Football Scheduler</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+  	<h3 style="font-weight: bold;text-align: center;color: blue">FIXTURES & GOAL SCORE</h3>
+		<table class="table table-bordered table-stripped">
+                <thead>
+                    <tr>
+                        <th>TEAM ID</th>
+                        <th>TEAM NAMES</th>
+                        <th>DATE</th>
+                        <th>TIME</th>
+                        <th>VENUE</th>
+                        <th>GOAL SCORE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for instance in schedules %}
+                    <tr>
+                        <td>{{instance.id}}</td>
+                        <td>{{instance.TeamName1}}</td>
+                        <td>{{instance.Date}}</td>
+                        <td>{{instance.Time}}</td>
+                        <td>{{instance.Venue}}</td>
+                        <td>{{instance.Goalscore}}
+                            <a href="/footballapp/updategoal/{{instance.id}}" 
+                                        class="btn btn-success" role="button">UPDATE</a>
+                            <a href="/footballapp/delete/{{instance.id}}" 
+                                        class="btn btn-success" role="button">DELETE</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+    </div>
+</div>

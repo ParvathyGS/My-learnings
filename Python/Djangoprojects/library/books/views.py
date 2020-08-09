@@ -62,4 +62,4 @@ def editBooks(request,book_id):
 def deleteBooks(request,book_id):
 	book_detail = Book_details.objects.get(id=book_id)
 	book_detail.delete()
-	return HttpResponseRedirect("/books/intro-page/")
+	return HttpResponseRedirect("/PGFinder/listpg/")

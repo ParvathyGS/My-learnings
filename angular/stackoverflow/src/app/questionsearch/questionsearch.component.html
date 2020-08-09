@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="form-group">
+      <form class="form-inline" #form6="ngForm" (ngSubmit)="questionSearch(form6.value)">
+          <label>Search by keywords :</label><br>
+          <input type="text" class="form-control" ngModel name="keyvalue" #keyvalue="ngModel" size =75><br><br>
+          <input type="submit" class="btn btn-success" value="Search">
+      </form>
+    </div>
+
+    <ul style="list-style: none;background-color:cornflowerblue " class="Question" *ngIf="question_arr.data">
+      <li class="list-group-item" *ngFor="let question of question_arr.data" style="padding-right: 3%;">
+        <span>{{question.title}}</span>
+        <span>{{question.question}}</span>
+      </li>
+    </ul>
+  </div>
+</div> 

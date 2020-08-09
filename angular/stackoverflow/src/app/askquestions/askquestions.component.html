@@ -1,0 +1,11 @@
+<div class="container">	<br>
+    <div class="row" style="margin-left: 45%;">
+        <form #form3="ngForm" (ngSubmit)="Askquestion(form3.value)">
+            <label>Title</label><br>
+            <input type="text" ngModel name="title" #title="ngModel"><br>
+            <label>Question</label><br>
+            <input type="text" ngModel name="question" #question="ngModel"><br><br>
+            <input type="submit" value="submit">
+        </form>
+    </div>
+</div> 

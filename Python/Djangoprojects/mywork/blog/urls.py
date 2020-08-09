@@ -23,7 +23,7 @@ urlpatterns = [
 	# path('upload-file/',views.upload_file,name='upload_file'),
 	# path('showImage/',views.showImage,name='showImage'),
 	#path('sendMail/',views.sendMailToUser,name='sendMailToUser'),
-	# path('abcd/',views.sample_ajax_view,name='sample_ajax_view'),
+	path('abcd/',views.sample_ajax_view,name='sample_ajax_view'),
 	# path('sampleView/',views.sample_view,name='sample_view'),
 	#path('someView/',views.some_view,name='some_view'),	 
 	#path('html2pdf/',views.html_to_pdf_view,name='html_to_pdf_view'),
@@ -31,5 +31,5 @@ urlpatterns = [
 	# path('login/',views.login,name='login'),
 	# path('sampleapi/',views.sample_api,name= 'sample_api'),
 	#path('sampledata/',views.sample_data,name= 'sample_data'),
-	path('sampleput/<int:requested_blog_id>/',views.sample_put,name= 'sample_put'),
+	# path('sampleput/<int:requested_blog_id>/',views.sample_put,name= 'sample_put'),
 	]

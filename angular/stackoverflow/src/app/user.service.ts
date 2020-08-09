@@ -24,7 +24,6 @@ export class UserService {
 
 private usersUrl = 'http://forum.mashuptest.com/api/register';
 private loginUrl = 'http://forum.mashuptest.com/api/login';
-private askUrl = 'http://forum.mashuptest.com/api/question';
 private listUrl = 'http://forum.mashuptest.com/api/question';
 
 
@@ -33,14 +32,8 @@ signupAction(credentials:User): Observable<User> {
   }
 
 loginAction(credentials:User): Observable<User> {
-  console.log(credentials);
-  return this.http.post<User>(this.loginUrl,credentials);
+   return this.http.post<User>(this.loginUrl,credentials);
 }
-
-// askQuestion(question:Question): Observable<Question> {
-//   // console.log(question);
-// }
-
 
 listallQuestion(): Observable<Question_details[]> {
   return this.http.get<Question_details[]>(this.listUrl);
